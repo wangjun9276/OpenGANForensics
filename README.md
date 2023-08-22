@@ -11,9 +11,8 @@ Before running the code, please configure your env following the requirement fil
 We collected our own dataset using the code and models released by [PTI](https://github.com/danielroich/PTI).
 
 ## 2. Training and testing
-We provide two codes for training.
+### We provide two codes for training. The dataset load function can be replaced by the users based on the tasks.
 
-### Open Set Recognition
 To train the models in paper for classification and localization, run this command:
 ```train
 python main_ResNetVitLoc.py
