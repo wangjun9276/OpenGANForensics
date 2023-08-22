@@ -1,6 +1,6 @@
 # OpenGANForensics
 Official PyTorch implementation of
-["**Open Set Classification of GAN-based Image Manipulations via a ViT-based Hybrid Architecturen**"](https://openaccess.thecvf.com/content/CVPR2023W/WMF/papers/Wang_Open_Set_Classification_of_GAN-Based_Image_Manipulations_via_a_ViT-Based_CVPRW_2023_paper.pdf). 
+["**Open Set Classification of GAN-based Image Manipulations via a ViT-based Hybrid Architecture**"](https://openaccess.thecvf.com/content/CVPR2023W/WMF/papers/Wang_Open_Set_Classification_of_GAN-Based_Image_Manipulations_via_a_ViT-Based_CVPRW_2023_paper.pdf). 
 
 
 ## 1. Requirements
