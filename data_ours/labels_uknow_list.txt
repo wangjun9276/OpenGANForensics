@@ -1,0 +1,5 @@
+Trans
+LDiff
+LSGM
+ProGAN
+StarGAN

@@ -1,0 +1,5 @@
+BEGAN
+DDPM
+StyleGAN2
+StyleGAN3
+BigGAN
