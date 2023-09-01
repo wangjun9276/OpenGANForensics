@@ -11,17 +11,18 @@ Before running the code, please configure your env following the requirement fil
 We collected our own dataset using the code and models released by [PTI](https://github.com/danielroich/PTI).
 
 ## 2. Training and testing
-### We provide two codes for training. The dataset load function can be replaced by the users based on the tasks.
+### We provide two networks for training. The dataset load function can be replaced by the users based on their own tasks.
 
 To train the models in paper for classification and localization, run this command:
 ```train
-python main_ResNetVitLoc.py
+python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodown
 ```
+Note: if loc and nodown are activated, the network is exactly the one we used in our work. Without --loc, it will be resnet50 + Vit network.
 
-To train the models for general open set recognition tasks only, run this command:
-```train
-python main_ResNetVit.py
-```
+For open set test, simply run the command:
+'''Open set test
+python test_osr.py
+'''
 
 ## Citation
 - If you find our work or the code useful, please consider cite our paper using:
