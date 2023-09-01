@@ -20,9 +20,9 @@ python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodow
 Note: if loc and nodown are activated, the network is exactly the one we used in our work. Without --loc, it will be resnet50 + Vit network.
 
 For open set test, simply run the command:
-'''Open set test
+```Open set test
 python test_osr.py
-'''
+```
 
 ## Citation
 - If you find our work or the code useful, please consider cite our paper using:
