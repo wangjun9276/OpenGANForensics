@@ -129,7 +129,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr', '-lr', type=float, default=0.0001, help='learning rate for training')
     parser.add_argument('--num_workers', '-nw', type=int, default=4, help='num_workers for training')
     parser.add_argument('--classes', '-c', default=2, help='number of classes for training')
-    parser.add_argument('--pretrain', '-pre', default=True, help='define to resume training with pretrained model or not')
+    parser.add_argument('--pretrain', action='store_true', default=False, help='define to resume training with pretrained model or not')
     parser.add_argument('--model', type=str, default='resnet50', help='pretrained model weights for training')
 
     parser.add_argument('--loc', action='store_true', default=False, help='load hybrid network for loc and cls if True')
