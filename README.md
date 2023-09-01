@@ -21,7 +21,7 @@ Note: if loc and nodown are activated, the network is exactly the one we used in
 
 For open set test, simply run the command:
 ```Open set test
-python test_osr.py
+python test_osr.py --weights_path ./path_to_model --pretrain --loc --nodown
 ```
 
 ## Citation
