@@ -35,3 +35,6 @@ python test_osr.py --weights_path ./path_to_model --pretrain --loc --nodown
   year={2023}
 }
 ```
+
+## Contact
+- If you find a problem with the code please contact me
