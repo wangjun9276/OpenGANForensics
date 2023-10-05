@@ -23,7 +23,9 @@ For open set test, simply run the command:
 ```Open set test
 python test_osr.py --weights_path ./path_to_model --pretrain --loc --nodown
 ```
+### Pretrained Model
 
+You can find one of the pretrained model [here](https://drive.google.com/file/d/1UJ8dhiMcbebMv6fHAVeGg2LOOrvrt1qC/view?usp=drive_link)
 ## Citation
 - If you find our work or the code useful, please consider cite our paper using:
 ```bibtex
