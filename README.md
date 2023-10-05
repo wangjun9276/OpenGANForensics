@@ -25,7 +25,7 @@ python test_osr.py --weights_path ./path_to_model --pretrain --loc --nodown
 ```
 ### Pretrained Model
 
-You can find one of the pretrained models [here](https://drive.google.com/drive/folders/1tgVPNL4lCVYUkT1OyYhGDmz0lOu75EHW?usp=drive_link)
+You can find one of the pretrained models [here](https://drive.google.com/drive/folders/1tO_0PQvlSm_bbpe1zhyOnIF6kPZg2MX9?usp=drive_link)
 ## Citation
 - If you find our work or the code useful, please consider cite our paper using:
 ```bibtex
