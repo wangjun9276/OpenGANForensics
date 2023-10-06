@@ -26,6 +26,8 @@ python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth  --nodown -
 ### Pretrained Model
 
 You can find one of the pretrained models [here](https://drive.google.com/drive/folders/1tO_0PQvlSm_bbpe1zhyOnIF6kPZg2MX9?usp=drive_link)
+
+In data/dati folders, you can find configs.txt that records the splts of the closed- and open-set.
 ## Citation
 - If you find our work or the code useful, please consider cite our paper using:
 ```bibtex
