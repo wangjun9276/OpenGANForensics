@@ -15,13 +15,13 @@ We collected our own dataset using the code and models released by [PTI](https:/
 
 To train the models in paper for classification and localization, run this command:
 ```train
-python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodown
+python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodown --masks
 ```
-Note: if loc and nodown are activated, the network is exactly the one we used in our work. Without --loc, it will be resnet50 + Vit network.
+Note: if loc, masks and nodown are activated, the network is exactly the one we used in our work for facial arrtibute edit classification. Without --loc, it will be resnet50 + Vit network. Masks indicates to load ground truth mask for localization task.
 
 For open set test, simply run the command:
 ```Open set test
-python test_osr.py --weights_path ./path_to_model --pretrain --loc --nodown
+python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth  --nodown --pretrain --classes 3 --data_path ./dati/
 ```
 ### Pretrained Model
 
