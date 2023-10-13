@@ -17,7 +17,7 @@ def read_txt(path):
     return txt_content
 
 
-def read_csv(path):
+def read_GAN_csv(path):
     img_path = []
     labels = []
     masks = []
@@ -32,6 +32,24 @@ def read_csv(path):
             #masks.append(line[3])
 
     return img_path, labels, masks
+
+
+def read_SCL_csv(path):
+    img_path = []
+    labels = []
+    masks = []
+    with open(path, "r") as f:
+        reader = csv.reader(f)
+        for line in reader:
+            if line[1] == 'path':
+                continue
+            # data = f.readline()
+            img_path.append(line[1])
+            labels.append(line[2])
+            masks.append(line[3])
+
+    return img_path, labels, masks
+
 
 class RandomResize(object):
 
