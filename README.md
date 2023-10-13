@@ -12,7 +12,7 @@ We collected our own dataset using the code and models released by [PTI](https:/
 
 ## 2. Training and testing
 
-We provide two networks for training. The users can replace the dataset load function based on their own tasks.
+**We provide two networks for training. The users can replace the dataset load function based on their own tasks.**
 
 To train the models in our paper for classification and localization, run this command:
 
