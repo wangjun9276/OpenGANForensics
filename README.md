@@ -18,11 +18,11 @@ To train the models in our paper for classification and localization, run this c
 
 Run hybrid classification and localization network for facial attribute edit images
 ```
-python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodown --masks
+python main.py --save_models ./path_to_save_model --model resnet50 --classes 11 --loc --nodown --masks
 ```
 Run classification network for GAN attribution task
 ```
-python main.py --save_models ./path_to_save_model --model resnet50 --nodown
+python main.py --save_models ./path_to_save_model --model resnet50 --classes 3 --nodown
 ```
 Note: if loc, masks and nodown are activated, the network is exactly the one we used in our work for facial attributes edit classification. Without --loc, it will be resnet50 + Vit network for GAN attribution task. Masks indicates loading ground truth mask for localization task.
 
@@ -30,7 +30,7 @@ For open set test, simply run the command:
 
 Run hybrid classification and localization network for facial attribute edit images
 ```Open set test for facial attribute edit classification
-python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth --loc --nodown --pretrain --classes 3 --data_path ./dati/
+python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth --loc --nodown --pretrain --classes 11 --data_path ./data/
 ```
 Run classification network for GAN attribution task
 ```Open set test for GAN attribution
