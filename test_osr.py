@@ -1,7 +1,3 @@
-'''
-ResNet + (Vit for classification), patching after CNN extraction, 61 ResNetPlusTrans2.py
-'''
-
 import argparse
 import torchvision.transforms as transforms
 import torch.nn as nn
