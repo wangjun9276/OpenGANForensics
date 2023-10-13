@@ -11,13 +11,13 @@ Before running the code, please configure your env following the requirement fil
 We collected our own dataset using the code and models released by [PTI](https://github.com/danielroich/PTI).
 
 ## 2. Training and testing
-### We provide two networks for training. The dataset load function can be replaced by the users based on their own tasks.
+### We provide two networks for training. The users can replace the dataset load function based on their own tasks.
 
-To train the models in paper for classification and localization, run this command:
+To train the models in our paper for classification and localization, run this command:
 ```train
 python main.py --save_models ./path_to_save_model --model resnet50 --loc --nodown --masks
 ```
-Note: if loc, masks and nodown are activated, the network is exactly the one we used in our work for facial arrtibute edit classification. Without --loc, it will be resnet50 + Vit network. Masks indicates to load ground truth mask for localization task.
+Note: if loc, masks and nodown are activated, the network is exactly the one we used in our work for facial attributes edit classification. Without --loc, it will be resnet50 + Vit network for GAN attribution task. Masks indicates loading ground truth mask for localization task.
 
 For open set test, simply run the command:
 ```Open set test
