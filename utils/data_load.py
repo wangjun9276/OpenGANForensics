@@ -2,12 +2,12 @@ from PIL import Image
 import torch.utils.data as data
 import torch
 import numpy as np
-from utils.utils import read_txt, read_csv
+from utils.utils import read_txt, read_GAN_csv, read_SCL_csv
 import cv2
 
 
 class Custom_train_loader(data.Dataset):
-    def __init__(self, data_path, label_path, img_size=64, transform=None, train='_train.csv', binary=False, mask=False):
+    def __init__(self, data_path, label_path, img_size=64, transform=None, train='_train.csv', binary=False, mask=False, dataset=False):
         self.data_path = data_path
         self.lable_list = read_txt(label_path)
         self.transform = transform
@@ -15,6 +15,7 @@ class Custom_train_loader(data.Dataset):
         self.binary = binary
         self.img_size = img_size
         self.masks = mask
+        self.dataset = dataset
         #print(self.masks)
 
         edit_label = 0
@@ -23,7 +24,10 @@ class Custom_train_loader(data.Dataset):
         for lable in self.lable_list:
             #print(len(imgs))
             if edit_label == 0:
-                self.img_list, _, self.mask_list = read_csv(data_path + lable + self.train)
+                if self.GAN:
+                    self.img_list, _, self.mask_list = read_GAN_csv(data_path + lable + self.train)
+                else:
+                    self.img_list, _, self.mask_list = read_SCL_csv(data_path + lable + self.train)
                 self.nm_per_sample = len(self.img_list)
                 self.sub_label = list(np.ones(self.nm_per_sample) * edit_label)
             else:
