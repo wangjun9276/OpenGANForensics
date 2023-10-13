@@ -37,6 +37,7 @@ def main_worker(**kwargs):
                                      binary=False,
                                      train='_test.csv',
                                      mask=args.masks,
+                                     loc=args.loc,
                                      transform=train_transform)
     known_loader = torch.utils.data.DataLoader(known_data, batch_size=args.batch, shuffle=True,
                                                num_workers=args.num_workers)
@@ -46,6 +47,7 @@ def main_worker(**kwargs):
                                      binary=False,
                                      train='_test.csv',
                                      mask=args.masks,
+                                     loc=args.loc,
                                      transform=test_transform)
     unknown_loader = torch.utils.data.DataLoader(unnknown_data, batch_size=args.batch, shuffle=True,
                                                num_workers=args.num_workers)
