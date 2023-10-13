@@ -43,10 +43,11 @@ def main_worker(**kwargs):
                                          transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
                                          ])
 
-    train_data = Custom_train_loader(args.data_path, './data_ours/labels_train_list.txt',
+    train_data = Custom_train_loader(args.data_path, args.data_path+'labels_train_list.txt',
                                      img_size=args.img_size,
                                      binary=False,
                                      mask=args.masks,
+                                     loc=args.loc,
                                      transform=train_transform)
     train_loader = torch.utils.data.DataLoader(train_data, batch_size=args.batch, shuffle=True,
                                                num_workers=args.num_workers)
@@ -55,6 +56,7 @@ def main_worker(**kwargs):
                                      img_size=args.img_size,
                                      binary=False,
                                      mask=args.masks,
+                                     loc=args.loc,
                                      transform=test_transform, train=False)
     valid_loader = torch.utils.data.DataLoader(valid_data, batch_size=args.batch, shuffle=True,
                                                num_workers=args.num_workers)
