@@ -30,7 +30,7 @@ For open set test, simply run the command:
 
 Run hybrid classification and localization network for facial attribute edit images
 ```Open set test for facial attribute edit classification
-python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth --loc --nodown --pretrain --masks --classes 11 --data_path ./data/
+python3 test_osr.py -m ./saved_model/resnet50ND_Vit2_S2_4_b32/**.pth --loc --nodown --pretrain --classes 11 --data_path ./data/
 ```
 Run classification network for GAN attribution task
 ```Open set test for GAN attribution
