@@ -1,6 +1,8 @@
 '''
 Official PyTorch implementation of "Open Set Classification of GAN-based Image Manipulations via a ViT-based Hybrid Architecture".
 
+Github link: https://github.com/wangjun9276/OpenGANForensics
+
 If it is useful, please cite our work
 
 @inproceedings{wang2023open,
